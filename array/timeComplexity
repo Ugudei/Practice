@@ -1,0 +1,27 @@
+Access: O(1);
+Search: O(n);
+Search (sorted array): O(log(n));
+Insert: O(n);
+Insert: ( at the end): O(1);
+Remove: O(n);
+Remove ( at the end): O(1);
+
+
+Tips:
+Expand upon if there are duplicate values in the array. Would duplicate values affect the answer?
+
+Observe not to go out of bounds, when iterating through the array elements.
+
+Careful about slicing or concatenating array in code. Usually, slicing and Concatenating would take O(n). Use start and end indices to demarcate a subarray/range where possible.
+
+Corner Cases:
+	Empty sequence
+	Sequence with 1 or 2 elements
+	Sequence with repeated elements
+	Duplicated values in the sequence	
+Because both arrays and strings are sequences, string is an array of characters
+
+
+Sliding window:
+	The two pointers usually move in the  same direction will never overtake each other. 
+	This ensures that each values is only visited at most twice and time comp is still O(n).
