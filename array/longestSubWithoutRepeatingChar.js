@@ -30,14 +30,23 @@
  * @return {number}
  */
  var lengthOfLongestSubstring = function(s) {
-      // input string
+    // input string
     // output  num
-    // iterate through the string of characters
-        // store unique chars in new array
-    // return the length of new array
-    const stringAr = [];
-    for(var i = 0; i <= s.length; i++){
-        if(s[i] == stringAr[i])
-    };
-    
+    let map = {}; 
+    let maxLength = 0;
+    let start = 0;
+    for( var i = 0; i < s.length; i++){ // iterate through input array
+        var lastChar = s[i];  // 
+        if(map[lastChar] == undefined) { // check if input array element exist in new array
+            map[lastChar] = 0;
+        }
+        map[lastChar] += 1; // next element
+        while (map[lastChar] > 1) { // 
+            var firstChar = s[start]; //
+            map[firstChar] -= 1;
+            start += 1;
+        }
+        maxLength = Math.max(maxLength, i - start + 1)
+    }
+    return maxLength;
 };
